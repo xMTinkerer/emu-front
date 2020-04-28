@@ -1,5 +1,5 @@
 async function request(loc) {
-    const response = await fetch("http://10.20.36.40:8080"+loc)
+    const response = await fetch("https://emu-back-msteex5udq-uw.a.run.app"+loc)
     return response.json();
 }
 
@@ -8,6 +8,7 @@ document.getElementById("eat").addEventListener("click", function() {
     // send request
     request("/eat").then((data) => {
         console.log(data);
+        alert(data["message"]);
     });
 });
 
@@ -16,5 +17,6 @@ document.getElementById("sleep").addEventListener("click", function() {
     // send request
     request("/sleep").then((data) =>{
         console.log(data);
+        alert(data["message"]);
     });
 });
