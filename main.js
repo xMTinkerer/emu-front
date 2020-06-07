@@ -26,7 +26,7 @@ var emuImgSrc = "/img/HatOn.png";
 
 
 
-document.getElementById( "emu" ).addEventListener( "load", function() {
+document.getElementById( "emu" ).addEventListener( "click", function() {
     console.log( 'Loaded emu..' );
     request("/getEmu").then( (data) =>{
         console.log( 'getEmu data: ' + data );
