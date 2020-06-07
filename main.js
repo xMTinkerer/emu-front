@@ -20,3 +20,7 @@ document.getElementById("sleep").addEventListener("click", function() {
         alert(data["message"]);
     });
 });
+
+document.getElementById( "emu" ).addEventListener( "load", function() {
+    console.log( 'Loaded emu..' );
+})
