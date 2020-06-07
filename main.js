@@ -23,7 +23,7 @@ document.getElementById("sleep").addEventListener("click", function() {
 
 var emuImgSrc = "/img/HatOn.png";
 
-request("/getEmu").then((data) =>{
+request("/getEmu").then( (data) =>{
     console.log( 'getEmu data: ' + data );
     document.getElementById( "emu" ).src = data.result;
 });
