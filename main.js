@@ -26,10 +26,10 @@ var emuImgSrc = "/img/HatOn.png";
 
 
 
-document.getElementById( "emu" ).addEventListener( "click", function() {
+document.getElementById( "emu" ).addEventListener( "load", function() {
     console.log( 'Loaded emu..' );
-    request("/getEmu").then( (data) =>{
-        console.log( 'getEmu data: ' + data );
+    request("/get-emu").then( (data) =>{
+        console.log( 'get-emu data: ' + data );
         document.getElementById( "emu" ).src = data.result;
     });
 })
