@@ -26,6 +26,10 @@ WORKDIR /dist
 COPY index.html .
 COPY main.js .
 
+RUN mkdir img
+COPY HatOn.png ./img
+COPY HatOff.png ./img
+
 # Copy binary from build to main folder
 RUN cp /build/main .
 
