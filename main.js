@@ -21,13 +21,8 @@ document.getElementById("sleep").addEventListener("click", function() {
     });
 });
 
-var emuImgSrc = "/img/HatOn.png";
-
-
-
-
-document.getElementById( "emu" ).addEventListener( "load", function() {
-    console.log( 'Loaded emu..' );
+window.addEventListener( "load", function() {
+    console.log( 'Loaded window..' );
     request("/get-emu").then( (data) =>{
         console.log( 'get-emu data: ' + data );
         document.getElementById( "emu" ).src = data.result;
