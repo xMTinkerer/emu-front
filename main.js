@@ -24,7 +24,7 @@ document.getElementById("sleep").addEventListener("click", function() {
 window.addEventListener( "load", function() {
     console.log( 'Loaded window..' );
     request("/get-emu").then( (data) =>{
-        console.log( 'get-emu data: ' + data );
+        console.log( 'get-emu data: ' + JSON.stringify( data ) );
         document.getElementById( "emu" ).src = data.result;
     });
 })
