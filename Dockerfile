@@ -27,8 +27,8 @@ COPY index.html .
 COPY main.js .
 
 RUN mkdir img
-COPY ./img/HatOn.png .
-COPY ./img/HatOff.png .
+COPY ./img/HatOn.png ./img/
+COPY ./img/HatOff.png ./img/
 
 # Copy binary from build to main folder
 RUN cp /build/main .
