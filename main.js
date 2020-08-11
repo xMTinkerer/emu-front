@@ -1,5 +1,5 @@
 async function request(loc) {
-    const response = await fetch("https://emu-back-4truud5coq-uw.a.run.app"+loc)
+    const response = await fetch("http://localhost:8081"+loc)
     return response.json();
 }
 
