@@ -5,6 +5,7 @@ async function request(loc) {
 
 // Eat
 document.getElementById("eat").addEventListener("click", function() {
+
     // send request
     request("/eat").then((data) => {
         console.log(data);
@@ -14,10 +15,13 @@ document.getElementById("eat").addEventListener("click", function() {
 
 // Sleep
 document.getElementById("sleep").addEventListener("click", function() {
+
+    document.getElementById("sleep").disabled = true;
     // send request
     request("/sleep").then((data) =>{
         console.log(data);
         alert(data["message"]);
+        document.getElementById("sleep").disabled = false;
     });
 });
 

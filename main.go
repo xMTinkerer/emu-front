@@ -8,7 +8,9 @@ import (
 
 func main() {
 
-	tracer.Start(tracer.WithAnalytics(true))
+	//tracer.Start(tracer.WithAnalytics(true))
+
+   tracer.Start(tracer.WithAgentAddr("datadog-agent:8126"))
 	defer tracer.Stop()
 
 	r := gin.Default()
